@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Version History</title>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f4f6f9;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .card {
+        background: white;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-3px);
+    }
+
+    .version-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        color: #222;
+    }
+
+    .date {
+        font-size: 0.9em;
+        color: #666;
+    }
+
+    .content {
+        margin-top: 10px;
+        display: none;
+    }
+
+    .content ul {
+        padding-left: 20px;
+    }
+
+    .badge {
+        background: #007bff;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-size: 0.8em;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>📋 Update Notes</h1>
+
+<div class="container">
+
+    <div class="card" onclick="toggle(this)">
+        <div class="version-header">
+            <span>Ver 1 <span class="badge">Initial</span></span>
+            <span class="date">Feb 2026</span>
+        </div>
+        <div class="content">
+            <ul>
+                <li>Document creation</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggle(this)">
+        <div class="version-header">
+            <span>Ver 1.1 <span class="badge">Update</span></span>
+            <span class="date">Apr 2026</span>
+        </div>
+        <div class="content">
+            <ul>
+                <li>Added definitions & clarifications</li>
+                <li>Added additional rules</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function toggle(card) {
+    const content = card.querySelector('.content');
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
